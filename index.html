@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>КП №111 — Вентиляция | Додо Пицца</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+--orange: #FF6900;
+--orange2: #FF8C38;
+--orange3: #FFB347;
+--dark: #111111;
+--white: #FFFFFF;
+--cream: #FFF8F2;
+--text: #1A1A1A;
+--muted: #888;
+--border: rgba(255,105,0,0.15);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Manrope', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; }
+
+/* Loader */
+.loader { position: fixed; inset:0; background: var(--dark); display:flex; justify-content:center; align-items:center; flex-direction:column; z-index:10000; transition: opacity 0.6s ease, visibility 0.6s ease; }
+.loader.hidden { opacity:0; visibility:hidden; }
+.loader-text { font-family: 'Unbounded', sans-serif; font-weight:700; color: var(--orange); letter-spacing: 3px; font-size: 12px; margin-bottom:10px; }
+.loader-bar { width:120px; height:2px; background: rgba(255,105,0,0.2); border-radius:2px; overflow:hidden; }
+.loader-bar-fill { height:100%; background: var(--orange); width:0; animation: loadFill 1.5s ease forwards; }
+@keyframes loadFill { from {width:0} to {width:100%} }
+
+/* Header */
+.header { position: fixed; top:0; left:0; right:0; height:68px; background: rgba(17,17,17,0.85); backdrop-filter: blur(20px); display:flex; align-items:center; justify-content:space-between; padding: 0 24px; z-index:1000; }
+.header-logo-name { font-family:'Unbounded', sans-serif; font-weight:900; font-size:15px; }
+.header-pill { background: rgba(255,105,0,0.12); border:1px solid rgba(255,105,0,0.3); color: var(--orange); font-size:10px; font-weight:700; padding:7px 16px; border-radius:100px; }
+
+/* Hero */
+.hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:100px 24px; position:relative; }
+.hero-title { font-family:'Unbounded', sans-serif; font-weight:900; font-size: clamp(36px,6vw,72px); line-height:1.05; text-align:center; margin-bottom:20px; }
+.hero-sub { font-size:16px; font-weight:500; color: rgba(255,255,255,0.45); margin-bottom:48px; }
+
+/* Table */
+.table-card { background:white; color:var(--text); border-radius:24px; overflow:hidden; box-shadow:0 8px 60px rgba(0,0,0,0.08); margin-bottom:40px; }
+table { width:100%; border-collapse: collapse; }
+thead { background: var(--dark); color:white; }
+th, td { padding:12px 16px; text-align:left; }
+tbody tr:hover { background:#FFF4EE; }
+
+/* Total Banner */
+.total-banner { position:relative; overflow:hidden; background: linear-gradient(135deg, var(--orange), #E85500); padding:40px 24px; display:flex; justify-content:space-between; margin-bottom:40px; border-radius:20px; color:white; }
+
+/* Footer */
+.footer { background:#0A0A0A; padding:28px 24px; display:flex; justify-content:space-between; font-size:12px; color: rgba(255,255,255,0.25); border-top:1px solid rgba(255,255,255,0.05); }
+
+.fab { position:fixed; bottom:32px; right:32px; background:linear-gradient(135deg,var(--orange),#E85500); color:white; border:none; border-radius:100px; padding:16px 26px; font-weight:700; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+<div class="loader-text">Додо Пицца</div>
+<div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- Header -->
+<header class="header">
+<div class="header-logo-name">ДОДО <span style="color:var(--orange)">ПИЦЦА</span></div>
+<div class="header-pill">КП №111 · 04.03.2026</div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+<h1 class="hero-title">Система вентиляции</h1>
+<p class="hero-sub">Поставка оборудования · Монтаж · Пусконаладочные работы</p>
+</section>
+
+<!-- Total Banner -->
+<div class="total-banner">
+<div>Итоговая стоимость проекта</div>
+<div>4 770 140 ₸</div>
+</div>
+
+<!-- Table -->
+<div class="table-card">
+<table>
+<thead>
+<tr><th>#</th><th>Наименование</th><th>Кол-во</th><th>Цена, ₸</th><th>Сумма, ₸</th></tr>
+</thead>
+<tbody>
+<tr><td>01</td><td>ДК Клапана</td><td>13</td><td>19 500</td><td>253 500</td></tr>
+<tr><td>02</td><td>Диффузоры круглые пластиковые</td><td>12</td><td>6 500</td><td>78 000</td></tr>
+<tr><td>03</td><td>Решётка потолочная с КСД 600×600</td><td>6</td><td>65 000</td><td>390 000</td></tr>
+<tr><td>04</td><td>Теплоизоляция</td><td>25</td><td>5 500</td><td>137 500</td></tr>
+<tr><td>05</td><td>Зонт 2200×1600</td><td>1</td><td>375 000</td><td>375 000</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+<div>Додо Пицца · КП №111 · ИП «М-TECH»</div>
+</footer>
+
+<!-- Print Button -->
+<button class="fab" onclick="window.print()">Распечатать</button>
+
+<script>
+// Loader
+window.addEventListener('load', () => {
+setTimeout(()=>document.getElementById('loader').classList.add('hidden'),1000);
+});
+</script>
+
+</body>
+</html>
